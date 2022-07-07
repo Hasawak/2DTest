@@ -71,10 +71,10 @@ public class NetworkManager : MonoBehaviour
         joiningPanel = GameObject.Find("JoiningPanel");
         colorPanel = GameObject.Find("ColorPanel");
         colorTakenWarning = GameObject.Find("ColorTakenWarning");
+        nickName = GameObject.Find("NickNameText").GetComponent<Text>().text.ToString();
 
         nickNameIF.onValueChanged.AddListener(ValidateInput);
 
-        nickName = GameObject.Find("NickNameText").GetComponent<Text>().text.ToString();
         admin = false;
         colorTakenWarning.SetActive(false);
     }
@@ -92,6 +92,7 @@ public class NetworkManager : MonoBehaviour
             nickName = input;
         }
     }
+
 
     public void SaveNickname()
     {
